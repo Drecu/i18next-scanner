@@ -946,7 +946,8 @@ class Parser {
       let resScan = this.resScan[lng] && this.resScan[lng][ns];
 
       if (!_.isPlainObject(resLoad)) { // Skip undefined namespace
-        this.error(`${chalk.yellow(JSON.stringify(ns))} does not exist in the namespaces (${chalk.yellow(JSON.stringify(this.options.ns))}): key=${chalk.yellow(JSON.stringify(key))}, options=${chalk.yellow(JSON.stringify(options))}`);
+        // ignore the error for the sake of readability
+        //this.error(`${chalk.yellow(JSON.stringify(ns))} does not exist in the namespaces (${chalk.yellow(JSON.stringify(this.options.ns))}): key=${chalk.yellow(JSON.stringify(key))}, options=${chalk.yellow(JSON.stringify(options))}`);
         return;
       }
 
